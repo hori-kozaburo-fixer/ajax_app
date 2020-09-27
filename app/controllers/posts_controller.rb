@@ -10,8 +10,9 @@ class PostsController < ApplicationController
   end
 
   def checked
+    binding.pry
     post = Post.find(params[:id])
-    if post.checked 
+    if post.checked           #paramsで受け取るのはHTMLとかのときjsonは違う
       post.update(checked: false)
     else
       post.update(checked: true)
