@@ -1,7 +1,7 @@
 function memo(){
   const submit = document.getElementById("submit");
   submit.addEventListener("click",(e) => {
-    const formData = new FromData(document.getElementById("form"));
+    const formData = new FormData(document.getElementById("form"));
     const XHR = new XHLHttpRequest();
     XHR.open("POST","/posts",true);
     XHR.responseType = "json";
