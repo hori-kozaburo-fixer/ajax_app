@@ -2,7 +2,7 @@ function memo(){
   const submit = document.getElementById("submit");
   submit.addEventListener("click",(e) => {
     const formData = new FormData(document.getElementById("form"));
-    const XHR = new XHLHttpRequest();
+    const XHR = new XMLHttpRequest();
     XHR.open("POST","/posts",true);
     XHR.responseType = "json";
     XHR.send(formData);
@@ -24,7 +24,7 @@ function memo(){
           ${item.content}
           </div>
         </div>`;
-      list.insertAdjacentHTML("arterend",HTML);
+      list.insertAdjacentHTML("afterend",HTML);
       formText.value = "";
     };
     e.preventDefault();
